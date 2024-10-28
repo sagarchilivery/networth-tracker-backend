@@ -53,8 +53,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull sagar246/networth-tracker-backend:latest
-            sudo docker stop sagar246/networth-tracker-backend || true
-            sudo docker rm sagar246/networth-tracker-backend || true
+            sudo docker stop networth-tracker-backend || true
+            sudo docker rm networth-tracker-backend || true
             sudo docker run -d --name sagar246/networth-tracker-backend -p 1337:1337 \
               -e DB_URI="${{ secrets.DB_URI }}" \
               -e PORT="${{ secrets.PORT }}" \
