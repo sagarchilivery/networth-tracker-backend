@@ -7,6 +7,7 @@ import { PORT, sequelize } from "./config.js";
 import morgan from "morgan";
 import piiRoutes from "./routes/piiRoutes.js";
 
+
 // Initialize Hapi server
 const server = Hapi.server({
   port: PORT,
