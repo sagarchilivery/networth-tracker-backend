@@ -40,10 +40,10 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/sagar246/networth-tracker-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/networth-tracker-backend:latest
 
       - name: Verify the pushed docker image
-        run: docker pull ${{ secrets.DOCKER_USERNAME }}/sagar246/networth-tracker-backend:latest
+        run: docker pull ${{ secrets.DOCKER_USERNAME }}/networth-tracker-backend:latest
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
