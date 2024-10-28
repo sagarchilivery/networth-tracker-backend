@@ -10,7 +10,14 @@ import piiRoutes from "./routes/piiRoutes.js";
 // Initialize Hapi server
 const server = Hapi.server({
   port: PORT,
-  host: "localhost",
+  host: "0.0.0.0",
+  routes: {
+    cors: {
+      origin: ["*"],
+      headers: ["Accept", "Content-Type"],
+      additionalHeaders: ["X-Requested-With"],
+    },
+  },
 });
 
 // Function to create tables
@@ -40,6 +47,7 @@ server.ext("onPreHandler", (request, h) => {
 const startServer = async () => {
   await initDB();
   await server.start();
+
   console.log(`Server running on ${server.info.uri}`);
 };
 
