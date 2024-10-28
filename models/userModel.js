@@ -1,19 +1,4 @@
 // Purpose: Define the User model for the database.
-// import Sequelize from "sequelize";
-// import { sequelize } from "../config.js";
-
-// const User = sequelize.define("User", {
-//   username: {
-//     type: Sequelize.STRING,
-//     unique: true,
-//   },
-//   password: {
-//     type: Sequelize.STRING,
-//   },
-// });
-
-// export default User;
-// models/userModel.js
 
 import Sequelize from "sequelize";
 import { sequelize } from "../config.js";
