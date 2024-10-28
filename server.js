@@ -34,6 +34,7 @@ server.route({
   },
 });
 
+
 // User routes
 server.route(userRoutes);
 server.route(piiRoutes);
