@@ -8,7 +8,7 @@ const cryptr = new Cryptr(ENCRYPTION_KEY);
 // Save Aadhaar number
 export const saveAadharNumber = async (request, h) => {
   const { aadharNumber } = request.payload;
-  const userId = request.user.data.id;
+  const userId = request?.user?.data?.id;
 
   // Check if Aadhaar number is a string of digits
   if (!/^\d+$/.test(aadharNumber)) {
@@ -59,7 +59,7 @@ export const saveAadharNumber = async (request, h) => {
 
 // Retrieve Aadhaar number
 export const getAadharNumber = async (request, h) => {
-  const userId = request.user.data.id;
+  const userId = request?.user?.data?.id;
 
   try {
     const pii = await PII.findOne({
