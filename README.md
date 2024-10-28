@@ -1,6 +1,3 @@
-Here’s the updated README file with your contact information included:
-
----
 
 # Backend System with Hapi.js, Sequelize, and PostgreSQL
 
@@ -69,7 +66,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Author Name**: Sagar Chilivery
 - **Email**: [chiliverysagar@gmail.com](mailto:chiliverysagar@gmail.com)
-
----
-
-Feel free to make any additional modifications if needed!
